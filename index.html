@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebCamera</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/face.js"></script>
+  <script src="js/ccv.js"></script>
+</head>
+
+<body>
+  <h1>GlassFinder</h1>
+
+  <div id="change_btn">
+    <input type="button" value="チェンジ">
+    <span type="text" id="style">撮影ver(この場で撮影します)</span>
+  </div>
+
+  <select name="items" id="items">
+    <option value="1">かっこいいメガネ</option>
+    <option value="2">鼻メガネ</option>
+    <option value="3">サングラス</option>
+    <option value="4">ハートメガネ</option>
+    <option value="5">ニコちゃん</option>
+  </select>
+
+  <button id="shutter" class="shutter">シャッター</button>
+
+  <div id="container">
+  <!-- ドロップダウンエリア -->
+  <div id="drop" class="photo dropbox not_use">
+    <img id="dropped">
+  </div>
+
+    <!-- フォトエリア -->
+    <div class="photo video use">
+      <video id="camera" width="550" height="450" autoplay></video>
+    </div>
+
+    <canvas id="picture" width="550" height="450"></canvas>
+
+    <audio id="se" preload="auto">
+      <source src="audio/camera-shutter3.mp3" type="audio/mp3">
+    </audio>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
